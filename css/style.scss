@@ -27,6 +27,18 @@ section{
        width: 100%;
        select{
            width: 100%;
+           padding: 10px;
+           border-radius: 6px;
+       }
+       input{
+           width: 100%;
+           padding: 10px;
+           border: 1px solid black;
+           border-radius: 6px;
+           &:focus{
+               outline: none;
+           }
+           
        }
    }
 }

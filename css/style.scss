@@ -5,7 +5,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-   font-size: 18px;
+   font-size: 16px;
    background: #F3F2F8;
    font-family: 'Open Sans', sans-serif;
 }
@@ -19,26 +19,49 @@ body{
        
     }
 }
+html {
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar{display: none;}
 section{
     width: 100%;
-    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    form{
        padding: 25px;
        width: 100%;
+       label{
+           line-height: 20px;
+           cursor: pointer;
+       }
        select{
            width: 100%;
            padding: 10px;
            border-radius: 6px;
+           background-color:#e3e6e8 ;
+           cursor: pointer;
+           option{
+            background-color:#e3e6e8 ;
+            padding: 10px !important;
+            cursor: pointer;
+            transition: 500ms;
+            &:hover{
+                background-color: white;
+            }
+           }
        }
        input{
            width: 100%;
            padding: 10px;
            border: 1px solid black;
+           background-color:#e3e6e8 ;
            border-radius: 6px;
            &:focus{
                outline: none;
            }
-           
+           cursor: pointer;
        }
    }
 }
@@ -55,7 +78,42 @@ section{
     }
 }
 a{
-    padding: 15px;
-    background: blue;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100% !important;
+    background: #1967d2;
     color: white;
+    cursor: pointer;
 }
+
+
+section{
+    position: relative;
+    .position{
+       
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background: rgba(0, 0, 0, 0.724);
+        display: none;
+        .display{
+            padding: 15px;
+            background: #1967d2;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+  @media (max-width:768px) {
+      select{
+         
+          margin-top: 15px;
+      }
+  }
+ 

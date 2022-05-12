@@ -1,3 +1,4 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
 $(document).ready(function () {
     var $page = $('input[name = page]')
     var $design = $('#design')
@@ -9,6 +10,10 @@ $(document).ready(function () {
     var $but = $('.Btn-button')
 
     $('.Btn-button').on('click', function () {
+        $('.position').css('display', 'flex')
+        $('.position').on('click', function () {
+            $('.position').css('display', 'none')
+        })
         var a = +$page.val() * 200000;
         var b = +$design.val();
         var c = +$media.val();
@@ -27,3 +32,22 @@ $(document).ready(function () {
         }
     })
 });
+$(document).keydown(function (event) {
+    if (event.keyCode == 123) { // Prevent F12
+        return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+        return false;
+    } else if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+    }
+});
+$(document).keyup(function (e) {
+    if (e.which == 44) {
+        alert("11");
+        e.preventDefault();
+    }
+});
+
+
+
+

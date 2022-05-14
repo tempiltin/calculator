@@ -28,7 +28,7 @@ html {
 
 section {
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,10 +72,9 @@ section form input:focus {
 .card {
   width: 100%;
   min-width: 100%;
-  box-shadow: 12px 17px 52px -2px #c7c5d8;
-  -webkit-box-shadow: 12px 17px 52px -2px #c7c;
-  -moz-box-shadow: 12px 17px 52px -2px #c7c5d8;
-  -ms-box-shadow: 12px 17px 52px -2px #c7c5d8;
+  box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 6px 4px rgba(0, 0, 0, 0.75);
   border: 0;
 }
 .card .card-body {
@@ -91,31 +90,54 @@ a {
   cursor: pointer;
 }
 
-section {
+.swich {
+  z-index: 44;
+}
+.swich input[type=checkbox] {
   position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  outline: none;
+  background: #e3e6e8;
+  border-radius: 20px;
+  border: none;
+  transition: 500ms;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
-section .position {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swich input[type=checkbox]::before {
+  content: "";
   position: absolute;
-  top: 0%;
-  left: 0%;
-  background: rgba(0, 0, 0, 0.724);
-  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: 500ms;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-section .position .display {
-  padding: 15px;
-  background: #1967d2;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
+.swich input:checked[type=checkbox] {
+  background: #40e551;
+}
+.swich input:checked[type=checkbox]::before {
+  left: 40px;
 }
 
 @media (max-width: 768px) {
+  section {
+    min-height: 130vh;
+  }
+  section ul li {
+    padding: 10px;
+  }
+
   select {
     margin-top: 15px;
+  }
+
+  .Btn-button {
+    margin-bottom: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

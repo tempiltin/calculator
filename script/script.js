@@ -55,9 +55,9 @@ $(document).keydown(function (event) {
     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
         return false;
     }
-    //  else if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-    //     disabledEvent(e);
-    // }
+     else if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+    }
 });
 $(document).keyup(function (e) {
     if (e.which == 44) {

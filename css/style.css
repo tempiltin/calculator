@@ -127,7 +127,10 @@ a {
 
 @media (max-width: 768px) {
   section {
-    min-height: 130vh;
+    min-height: auto;
+  }
+  section .container {
+    margin-top: 88%;
   }
   section ul li {
     padding: 10px;
@@ -139,5 +142,14 @@ a {
 
   .Btn-button {
     margin-bottom: 25px;
+  }
+}
+@media (max-width: 576px) {
+  section {
+    padding-top: 45%;
+  }
+
+  form {
+    z-index: 888;
   }
 }/*# sourceMappingURL=style.css.map */

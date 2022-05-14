@@ -10,6 +10,7 @@ $(document).ready(function () {
     var $but = $('.Btn-button')
     var $checkbox = $('input[name="check"]')
     var $display1 = $('.display1')
+    var $swich = $('.swich').css('display' , 'none')
     $('.Btn-button').on('click', function () {
         var httpSurov = new XMLHttpRequest()
         httpSurov.onreadystatechange = function () {
@@ -33,6 +34,7 @@ $(document).ready(function () {
         var total = a + b + c + s + l + n + py;
         $but.disabled = true;
         $('#display').html(total + ` so'm`);
+        $swich.css('display' , 'flex')
     })
     $('.Btn-button').on("click", function (event) {
     })
@@ -50,14 +52,14 @@ $(document).ready(function () {
     })
 });
 $(document).keydown(function (event) {
-    if (event.keyCode == 123) { // Prevent F12
+    if (event.keyCode == 123) { 
         return false;
     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
         return false;
     }
-     else if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-    }
+    //  else if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+    //     disabledEvent(e);
+    // }
 });
 $(document).keyup(function (e) {
     if (e.which == 44) {
